@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% load filters %}
+{% block title %}
+    Formulario en DJango
+{% endblock%}
+{% block content %}
+  
+    <h1 class="title">Crear Curso</h1>
+    <form action="" name="" method="GET">
+        <label for="titulo"> Nombre del Curso: </label>
+        <input type="text" name="titulo">
+        
+        <label for="contenido"> Nombre del Docente: </label>
+        <textarea type="contenido"></textarea>
+
+        <label for="publicado"> ¿Aprobado? </label>
+        <select name="publicado">
+            <option value="1">Si</option>
+            <option value="0">No</option>
+        </select>
+
+        <input type="submit" value="Agregar"/>
+    </form>
+   
+{% endblock %}

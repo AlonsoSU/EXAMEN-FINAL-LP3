@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{titulo}}
+{% endblock %}
+
+{% block content %}
+    <!-- Comentarios en HTML-->
+    <!-- Pagina Index-->
+    {% comment 'Datos de la página Index' %}
+        En esta página se mostrará la página inicial del sistema....
+    {% endcomment %}
+    <h1 class="title">Página {{titulo}}</h1>
+    <p> DESARROLLANDO EL EXAMEN FINAL DE LP3 Ojalá apruebe =) </p>
+    {% if mensaje %}
+        <p> Mensaje: {{mensaje}} </p>
+    {% else %}
+        <strong>El mensaje no tiene contenido...</strong>
+    {% endif %}
+
+    {% include 'listado_estudiantesregistrados.html' with encabezado="Integrante: " %}
+    
+    <p>Año 2022 </p>
+{% endblock %}

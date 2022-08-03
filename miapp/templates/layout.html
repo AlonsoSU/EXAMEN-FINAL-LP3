@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>
+        {% block title %}
+
+        {% endblock %}
+        | Ponce Susanibar
+    </title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+
+<body>
+    <header>
+        <div id="logotipo">
+            <img src="{% static 'images/UntelsC.png' %}" />
+            <h1>EXAMEN FINAL LP3</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'inicio' %}"> Inicio</a>
+            </li>
+            <li>
+                <a href="{% url 'saludo' %}"> Mensaje de Saludo</a>
+            </li>
+            <li>
+                <a href="{% url 'listar_articulos' %}"> Listar Cursos </a>
+            </li>
+            <li>
+                <a href="{% url 'create_articulo' %}"> Crear Cursos </a>
+            </li>
+            
+        </ul>
+    </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+    <div id="content">
+        <div class="box">
+          
+            {% block content %}
+            
+
+            {% endblock %}
+        </div>
+
+    </div>
+    <footer>
+        UNTELS - Lenguaje de Programación III &COPY; Flor Cerdán - {% now "d/m/Y" %}
+    </footer>
+
+
+</body>
+
+</html>
